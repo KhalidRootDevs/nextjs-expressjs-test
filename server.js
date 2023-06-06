@@ -13,6 +13,7 @@ mongoose
    .connect(
       `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.cyfho4w.mongodb.net/xoomsport?retryWrites=true&w=majority`
    )
+
    .then(() => console.log('Xoomsport Database connected'))
    .catch(err => {
       console.log(err, 'Failed to connect database');
@@ -23,7 +24,7 @@ app.prepare()
       server.use(express.json());
       server.use(cors());
 
-      const showRoutes = require('./routes/useRouter.js');
+      const showRoutes = require('./server/routes/useRouter.js');
 
       server.use('/api', showRoutes(server));
 

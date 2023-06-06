@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
+import { Toaster } from 'react-hot-toast';
 
 export default function AdminLogin() {
    const router = useRouter();
@@ -106,6 +107,7 @@ export default function AdminLogin() {
                </button>
             </form>
          </div>
+         <Toaster />
       </div>
    );
 }
