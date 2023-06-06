@@ -1,7 +1,3 @@
-import React from 'react'
-
 export default function page() {
-    return (
-        <div>profile</div>
-    )
+   return <div>profile</div>;
 }
